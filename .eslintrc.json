@@ -1,0 +1,20 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "babel"
+  ],
+  "extends": "airbnb-base",
+  "rules": {
+    "comma-dangle": [2, "never"],
+    "prefer-spread": 2,
+    "dot-notation": [2, {"allowPattern": "^[a-z]+(_[a-z]+)+$"}],
+    "no-underscore-dangle": 0,
+    "no-use-before-define": [2, "nofunc"],
+    "camelcase": [2, { "properties": "always" }]
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": { "config": "webpack.config.js" }
+    }
+  }
+}

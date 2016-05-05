@@ -1,0 +1,39 @@
+{
+  "name": "taskbatcher",
+  "description": "A utility that lets you easily run multiple tasks in a single batch",
+  "version": "0.1.0",
+  "keywords": [
+    "task",
+    "batch"
+  ],
+  "maintainers": [
+    {
+      "name": "Trevor Fenn",
+      "email": "sgtpepper43@gmail.com"
+    }
+  ],
+  "bugs": {
+    "web": "https://github.com/sgtpepper43/taskbatcher/issues"
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/sgtpepper43/taskbatcher.git"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "MIT",
+      "url": "https://github.com/sgtpepper43/taskbatcher/blob/master/LICENSE"
+    }
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.8.0",
+    "babel-eslint": "^6.0.4",
+    "babel-preset-es2015": "^6.6.0",
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb-base": "^2.0.0",
+    "eslint-plugin-babel": "^3.2.0",
+    "eslint-plugin-import": "^1.6.1"
+  }
+}
