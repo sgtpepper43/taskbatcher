@@ -3,6 +3,7 @@
 TaskBatcher is a utility that lets you easily run multiple tasks in a single batch.
 Partially inspired by Facebook's [DataLoader](https://github.com/facebook/dataloader)
 
+[![npm](https://img.shields.io/npm/v/taskbatcher.svg?maxAge=2592000)]()
 ![build status](https://api.travis-ci.org/sgtpepper43/taskbatcher.svg)
 ![deps](https://david-dm.org/sgtpepper43/taskbatcher.svg)
 ![dev-deps](https://david-dm.org/sgtpepper43/taskbatcher/dev-status.svg)
