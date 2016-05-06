@@ -17,7 +17,7 @@ You'll need to provide a `runTasksFn` function when creating a new TaskBatcher.
 import TaskBatcher from 'taskbatcher';
 const taskBatcher = new TaskBatcher(keys => runTasks(keys))
 ```
-The `runTasksFn` function takes on argument, `[key]`, and should return a Promise that resolves with `[value | Error]`.
+The `runTasksFn` function takes on argument, `[key]`, and should return a Promise that either resolves with `[value | Error]` or `{ [key]: value | Error, [key2]: value2 | Error }`.
 
 
 Then add tasks to the batcher using `addTask`. TaskBatcher will add your keys to a queue, and will run your `runTasksFn` function after a `delay` (default `50ms`) since the last time the function was called (aka, it debounces). They delay's won't stack indefinitely, however, and will eventually run after the `maxWait` ( default `250ms`) limit is reached.
@@ -56,7 +56,7 @@ userFetcher.fetch(1).then(user => console.log(`Here's your user: ${user}`));
 Create a new `TaskBatcher` given a task running function and options.
 
 - *runTasksFn*: A function which accepts an Array of keys, and returns a
-  Promise which resolves to an Array of values.
+  Promise which resolves to either an Array of values or a single object with key/value pairs.
 
 - *options*: An optional object of options:
   - *delay*: The number of milliseconds to delay
