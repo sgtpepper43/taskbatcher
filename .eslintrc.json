@@ -13,8 +13,6 @@
     "camelcase": [2, { "properties": "always" }]
   },
   "settings": {
-    "import/resolver": {
-      "webpack": { "config": "webpack.config.js" }
-    }
+    "import/resolver": "node"
   }
 }
