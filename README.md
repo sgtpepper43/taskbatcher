@@ -3,6 +3,8 @@
 TaskBatcher is a utility that lets you easily run multiple tasks in a single batch.
 Partially inspired by Facebook's [DataLoader](https://github.com/facebook/dataloader)
 
+![build status](https://api.travis-ci.org/sgtpepper43/taskbatcher.svg)
+
 ## Getting Started
 
 Install with npm
