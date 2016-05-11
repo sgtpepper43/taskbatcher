@@ -1,7 +1,7 @@
 {
   "name": "taskbatcher",
   "description": "A utility that lets you easily run multiple tasks in a single batch",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "keywords": [
     "task",
     "batch"
