@@ -36,7 +36,7 @@ taskBatcher.addTask(1).then(data => console.log(`Data received! ${data}`));
 TaskBatcher was initially designed around making requests, but it ended up being generic enough to handle any sort of task. Here's how to use it to make api requests:
 
 ```javascript
-function getUsersByIds(ids) { fetch(`/users?id=${ids.join(',')}`).then(resp => resp.json()); }
+const getUsersByIds = async (ids) => fetch(`/users?id=${ids.join(',')}`).then(resp => resp.json());
 
 const userFetcher = new TaskBatcher(getUsersByIds);
 userFetcher.addTask(1).then(user => console.log(`Here's your user: ${user}`));
@@ -51,6 +51,7 @@ In case you think it's weird to call `addTask` on `userFetcher`, feel free to re
 const userFetcher = new TaskBatcher(getUsersByIds, { renameAddTaskTo: 'fetch' });
 userFetcher.fetch(1).then(user => console.log(`Here's your user: ${user}`));
 ```
+**Note** Flow doesn't currently support [indexable signature for class declarations](https://github.com/facebook/flow/issues/1323), so if you're using flow, you should probably just not do this.
 
 ## API
 
